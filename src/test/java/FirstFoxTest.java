@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,7 @@ public class FirstFoxTest {
 
     @Test
     public void firstFoxTest() {
-        System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+ "/geckodriver.exe");
+        WebDriverManager.firefoxdriver().setup();
         WebDriver driver = new FirefoxDriver();
         driver.manage().window().fullscreen();
         driver.get("https://accounts.ukr.net/login?lang=ua");
@@ -24,7 +25,7 @@ public class FirstFoxTest {
         inputPassword.sendKeys("HillelTESTAutomation");
         inputPassword.submit();
         driver.manage().deleteAllCookies();
-        driver.quit();
+      //  driver.quit();
 
 
     }
