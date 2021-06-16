@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,7 @@ public class FirstChromeTest {
     @Test
 public void firstChromeTest (){
 
-    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "/chromedriver.exe");
+        WebDriverManager.firefoxdriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().fullscreen();
        driver.get("https://accounts.ukr.net/login?lang=ua");
@@ -25,9 +26,7 @@ public void firstChromeTest (){
         inputPassword.sendKeys("HillelTESTAutomation");
         inputPassword.submit();
         driver.manage().deleteAllCookies();
-       driver.quit();
-
-
+        driver.quit();
 }
 
 
