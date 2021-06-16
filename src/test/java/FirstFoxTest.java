@@ -12,6 +12,7 @@ public class FirstFoxTest {
     public void firstFoxTest() {
         System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+ "/geckodriver.exe");
         WebDriver driver = new FirefoxDriver();
+        driver.manage().window().fullscreen();
         driver.get("https://accounts.ukr.net/login?lang=ua");
 
         By locatorOfLogin = By.cssSelector("input[name='login']");

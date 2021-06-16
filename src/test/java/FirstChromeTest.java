@@ -13,6 +13,7 @@ public void firstChromeTest (){
 
     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+ "/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+        driver.manage().window().fullscreen();
        driver.get("https://accounts.ukr.net/login?lang=ua");
 
         By locatorOfLogin = By.cssSelector("input[name='login']");
@@ -24,7 +25,7 @@ public void firstChromeTest (){
         inputPassword.sendKeys("HillelTESTAutomation");
         inputPassword.submit();
         driver.manage().deleteAllCookies();
-        driver.quit();
+       driver.quit();
 
 
 }
