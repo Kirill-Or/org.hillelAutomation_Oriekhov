@@ -24,7 +24,7 @@ public class Demoqa {
         By bookStoreLocator = By.xpath("//div[contains(@class,'col-md-3')]//div[6]");
         WebElement webElementBookStore = driver.findElement(bookStoreLocator);
         webElementBookStore.click();
-        Thread.sleep(1500);
+        Thread.sleep(1500);// Без средслип не работает) никак
 
         By loginLocator = By.xpath("//div[@class='element-list collapse show']//li[@id='item-0']");
         WebElement webElementLogin = driver.findElement(loginLocator);
