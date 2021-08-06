@@ -54,6 +54,8 @@ public class FillTheForm {
    WebElement currentAddress = driver.findElement(By.xpath("//textarea[@id='currentAddress']"));
    currentAddress.sendKeys("San Francisco");
 
+
+        // Без понятия, там меняется название страны , как буд-то чекбокс выбран или нет
   // WebElement firstState = driver.findElement(By.xpath("//div[@id='state']//div[@class=' css-yk16xz-control']"));
   //  JavascriptExecutor executor = (JavascriptExecutor)driver;
   //  executor.executeScript("arguments[0].click();", firstState);
